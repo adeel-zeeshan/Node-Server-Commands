@@ -1,0 +1,67 @@
+Deploy To Digital Ocean
+adduser username
+password mnbvcxz123@
+
+
+
+id tddev
+
+usermod -aG sudo tddev
+
+id tddev
+
+sudo su - tddev
+
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+nano ~/.ssh/authorized_keys
+enter public key for it 
+
+chmod 600 ~/.ssh/authorized_keys
+
+sudo service ssh restart
+ Installing Node to server
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+sudo apt install nodejs
+node -v
+npm -v
+sudo apt install git
+git --version
+
+
+after this clone project from git
+
+To Online on pm2 
+sudo npm install -g pm2
+
+
+to remove port from IP
+
+sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
+sudo apt-get install libcap2-bin
+
+To start pm2
+
+pm2 start index.js
+
+To stop pm2
+
+pm2 stop index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
